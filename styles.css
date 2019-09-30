@@ -1,0 +1,177 @@
+@font-face {
+    font-family: Rumble;
+    src: url(./assets//Rumble\ Brave.otf);
+}
+
+@font-face {
+    font-family: Mosk;
+    src: url(./assets//Mosk\ Normal\ 400.ttf);
+}
+
+@font-face {
+    font-family: Colus;
+    src: url(./assets/Colus-Regular.ttf);
+}
+
+@media all and (min-width: 720px) {
+    body {
+        grid-template-columns: 1fr 10px 300px 400px 10px 1fr;
+        grid-template-rows: 50px 250px 1fr 50px;
+        grid-template-areas:
+            "... ... ... ... ... ..."
+            "... ... photo description ... ..."
+            "... ... body body ... ..."
+            "... ... ... ... ... ...";
+    }
+}
+
+@media all and (min-width: 1200px) {
+    body {
+        grid-template-columns: 1fr 10px 400px 600px 10px 1fr;
+        grid-template-rows: 50px 250px 1fr 50px;
+        grid-template-areas:
+            "... ... ... ... ... ..."
+            "... ... photo description ... ..."
+            "... ... body body ... ..."
+            "... ... ... ... ... ...";
+    }
+}
+
+@media all and (max-width: 720px) {
+    body {
+        grid-template-columns: 10px calc(100% - 20px) 10px;
+        grid-template-rows: 50px 250px auto 1fr 50px;
+        grid-template-areas:
+            "... ... ..."
+            "... photo ..."
+            "... description ..."
+            "... body ..."
+            "... ... ...";
+    }
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: grid;
+}
+
+.photo {
+    grid-area: photo;
+    display: flex;
+    justify-content: center;
+}
+
+.photo .avatar {
+    border-radius: 100%;
+    height: 100%;
+}
+
+.description {
+    grid-area: description;
+    font-family: Colus;
+}
+
+.description .header {
+    text-align: center;
+    font-size: 32px;
+}
+
+.description .intro {
+    padding: 25px 50px;
+    font-size: 16px;
+}
+
+.body {
+    grid-area: body;
+    font-family: Colus;
+}
+
+.body ul {
+    padding-inline-start: 0.1em;
+}
+
+.body .skills .languages,
+.body .skills .technologies {
+    flex-wrap: wrap;
+}
+
+.body .skills .languages::before {
+    content: 'Languages';
+    padding: 0 10px;
+}
+
+.body .skills .technologies::before {
+    content: 'Technologies';
+    padding: 0 10px;
+}
+
+.body .skills, .body .experience {
+    list-style-type: none;
+    font-size: 15px;
+    padding-inline-start: 0.1em;
+}
+
+.body .experience > li {
+    padding: 10px 0;
+}
+
+.body .experience > li h2.divider {
+    border-bottom: 1px solid black;
+}
+
+.body .experience li > * {
+    padding: 10px 0;
+}
+
+.body .experience li .title .time,
+.body .experience li .title .position {
+    text-decoration: black solid underline;
+    padding: 0 10px;
+}
+
+.body .experience li .responsibilities li {
+    list-style-type: none;
+}
+
+.body .experience li .technologies::before {
+    content: "Technologies";
+}
+
+.body .experience li .project-description::before {
+    content: "Project Description";
+}
+
+.body .experience li .customer::before {
+    content: "Customer";
+}
+
+.body .experience li .responsibilities::before {
+    content: "Responsibilities";
+}
+
+.body .experience li >*::before,
+.body .skills ul::before {
+    text-decoration: black solid underline;
+    padding: 0 10px;
+}
+
+.body .skills li {
+    display: flex;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+
+    list-style-type: none;
+}
+
+.list li {
+    margin: 0 10px;
+}
