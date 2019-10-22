@@ -129,6 +129,10 @@ body {
     padding: 10px 0;
 }
 
+.body .experience li .title {
+    font-size: 18px;
+}
+
 .body .experience li .title .time,
 .body .experience li .title .position {
     text-decoration: black solid underline;
