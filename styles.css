@@ -16,7 +16,7 @@
 @media all and (min-width: 720px) {
     body {
         grid-template-columns: 1fr 10px 300px 400px 10px 1fr;
-        grid-template-rows: 50px 250px 1fr 50px;
+        grid-template-rows: 50px 200px 1fr 50px;
         grid-template-areas:
             "... ... ... ... ... ..."
             "... ... photo description ... ..."
@@ -28,7 +28,7 @@
 @media all and (min-width: 1200px) {
     body {
         grid-template-columns: 1fr 10px 400px 800px 10px 1fr;
-        grid-template-rows: 50px 250px 1fr 50px;
+        grid-template-rows: 50px 200px 1fr 50px;
         grid-template-areas:
             "... ... ... ... ... ..."
             "... ... photo description ... ..."
@@ -40,7 +40,7 @@
 @media all and (max-width: 720px) {
     body {
         grid-template-columns: 10px calc(100% - 20px) 10px;
-        grid-template-rows: 50px 250px auto 1fr 50px;
+        grid-template-rows: 50px 200px auto 1fr 50px;
         grid-template-areas:
             "... ... ..."
             "... photo ..."
@@ -130,6 +130,10 @@ body {
     padding-inline-start: 0.1em;
 }
 
+.body .skills {
+    margin-block-start: 4em;
+}
+
 .body .skills .languages,
 .body .skills .technologies {
     flex-wrap: wrap;
@@ -140,8 +144,13 @@ body {
     padding: 0 10px;
 }
 
-.body .skills .technologies::before {
-    content: 'Technologies';
+.body .skills .databases::before {
+    content: 'Databases';
+    padding: 0 10px;
+}
+
+.body .skills .tools::before {
+    content: 'Tools';
     padding: 0 10px;
 }
 
