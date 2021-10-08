@@ -134,6 +134,10 @@ body {
     margin-block-start: 4em;
 }
 
+.body .skills .list {
+    flex-wrap: wrap;
+}
+
 .body .skills .languages,
 .body .skills .technologies {
     flex-wrap: wrap;
