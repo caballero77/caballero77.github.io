@@ -14,9 +14,12 @@
 }
 
 @media all and (min-width: 720px) {
+    .photo {
+        height: 250px;
+    }
     body {
         grid-template-columns: 1fr 10px 300px 400px 10px 1fr;
-        grid-template-rows: 50px 200px 1fr 50px;
+        grid-template-rows: 50px 300px 1fr 50px;
         grid-template-areas:
             "... ... ... ... ... ..."
             "... ... photo description ... ..."
@@ -48,6 +51,16 @@
             "... body ..."
             "... ... ...";
     }
+}
+
+.leetcode {
+    height: 16px;
+    width: 25px;
+    display: block;
+    background: black;
+    padding: 2px;
+    margin-top: 4px;
+    border-radius: 3px;
 }
 
 .download-pdf {
