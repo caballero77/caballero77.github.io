@@ -13,13 +13,13 @@
     src: url(./assets/Colus-Regular.ttf);
 }
 
-@media all and (min-width: 720px) {
+@media all and (min-width: 925px) {
     .photo {
         height: 250px;
     }
     body {
-        grid-template-columns: 1fr 10px 300px 400px 10px 1fr;
-        grid-template-rows: 50px 300px 1fr 50px;
+        grid-template-columns: 1fr 10px 350px 500px 10px 1fr;
+        grid-template-rows: 50px 360px 1fr 50px;
         grid-template-areas:
             "... ... ... ... ... ..."
             "... ... photo description ... ..."
@@ -31,7 +31,7 @@
 @media all and (min-width: 1200px) {
     body {
         grid-template-columns: 1fr 10px 400px 800px 10px 1fr;
-        grid-template-rows: 50px 200px 1fr 50px;
+        grid-template-rows: 50px 300px 1fr 50px;
         grid-template-areas:
             "... ... ... ... ... ..."
             "... ... photo description ... ..."
@@ -40,7 +40,7 @@
     }
 }
 
-@media all and (max-width: 720px) {
+@media all and (max-width: 925px) {
     body {
         grid-template-columns: 10px calc(100% - 20px) 10px;
         grid-template-rows: 50px 200px auto 1fr 50px;
@@ -65,8 +65,8 @@
 
 .download-pdf {
     position: fixed;
-    top: 50px;
-    right: 50px;
+    top: 25px;
+    right: 25px;
     height: 30px;
     width: 30px;
     border-radius: 100%;
@@ -118,7 +118,7 @@ body {
 }
 
 .description .intro {
-    padding: 25px 50px;
+    padding: 20px 50px;
     font-size: 16px;
 }
 
@@ -141,10 +141,6 @@ body {
 
 .body ul {
     padding-inline-start: 0.1em;
-}
-
-.body .skills {
-    margin-block-start: 4em;
 }
 
 .body .skills .list {
